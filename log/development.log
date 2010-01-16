@@ -6086,3 +6086,487 @@ ActionController::RoutingError (No route matches "/images/hto.gif" with {:method
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 17:48:54) [GET]
+  [4;36;1mProduct Load (1.5ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 34ms (View: 20, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 17:48:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 17:48:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 17:48:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 17:48:58) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Rendering template within layouts/store
+Rendering store/add_to_cart
+Completed in 55ms (View: 12, DB: 1) | 200 OK [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 17:49:02) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Rendering template within layouts/store
+Rendering store/add_to_cart
+Completed in 30ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2010-01-16 18:22:05) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk="}
+Redirected to http://localhost:3000/store
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:22:05) [GET]
+  [4;35;1mProduct Load (1.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:22:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:22:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:22:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:29:55) [GET]
+  [4;36;1mProduct Load (1.3ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+
+ActionView::TemplateError (undefined local variable or method `item' for #<ActionView::Base:0x25f2650>) on line #6 of app/views/store/_cart.html.erb:
+3: <table>
+4:   <%= render(:partial => "cart_item", :collection => cart.items) %>
+5:   
+6:     <td class="item-price"><%= number_to_currency(item.price) %></td>
+7:   </tr>
+8:   <tr class="total-line">
+9:   <td colspan="2">Total</td>
+
+    app/views/store/_cart.html.erb:6
+    app/views/layouts/store.html.erb:18
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:07) [GET]
+  [4;35;1mProduct Load (1.7ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.7ms)
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:10) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:10) [GET]
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (1.2ms)
+Rendered store/_cart (4.8ms)
+Completed in 33ms (View: 20, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:11) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:11) [GET]
+  [4;35;1mProduct Load (1.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.4ms)
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:12) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:12) [GET]
+  [4;35;1mProduct Load (1.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.9ms)
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:13) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:13) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.6ms)
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:14) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:14) [GET]
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.4ms)
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:15) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:15) [GET]
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.5ms)
+Completed in 99ms (View: 11, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2010-01-16 18:32:16) [POST]
+  Parameters: {"authenticity_token"=>"KES1tEmu8Y65r1URHjVBRQ6WHXs7p1bcAh1ex+T+XWk=", "id"=>"6"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Redirected to http://localhost:3000/store
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/6]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:16) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (1.7ms)
+Completed in 28ms (View: 15, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:30) [GET]
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (2.5ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 18:32:31) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.2ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 18:32:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
