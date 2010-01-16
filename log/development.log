@@ -6055,3 +6055,34 @@ ActionController::RoutingError (No route matches "/images/hto.gif" with {:method
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2010-01-16 16:30:15) [GET]
+  [4;36;1mProduct Load (14.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 247ms (View: 110, DB: 33) | 200 OK [http://localhost/store]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 16:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/gre.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 16:30:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/asdfasdf.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 16:30:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/hto.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
