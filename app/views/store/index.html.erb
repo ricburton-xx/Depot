@@ -1,0 +1,17 @@
+<p><%= "You have visted this store page #{@count} times!" if @count_min_five %></p>
+<h1>Your Pragmatic Catalog</h1>
+<% for product in @products -%>
+<div class="entry">
+
+
+
+<%= link_to image_tag(product.img_url), :method => :post  %>
+
+<h3><%=h product.title %></h3>
+<%= product.descript %>
+<div class="price-line">
+<span class="price"><%= number_to_currency(product.price, :unit => "&pound;") %></span>
+<%= button_to "Add to cart", :action => 'add_to_cart', :id => product %>
+</div>
+</div>
+<% end %>
